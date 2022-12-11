@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.flexsection{
+	background-color: black;
+	width: 40%;
+	height: 85vh;
+	margin: 5% auto;
+	box-sizing: border-box;
+	padding: 20px 100px;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.firstflex{
+	display: flex;
+	flex-wrap: nowrap;
+}
+.firstflex .flexbox{
+	border: none;
+	width: 75px;
+	height: 75px;
+	margin: 2px;
+	padding: 2px;
+	color: white;
+	text-align: center;
+}
+.flexbox span{
+	font-size:10px;
+}
+.boxcolor1{
+	background-color: black;
+	cursor: pointer;
+}
+.boxcolor2{
+	background-color: goldenrod;
+	cursor: pointer;
+}
+.boxcolor3{
+	background-color: #c70683;
+	cursor: pointer;
+}
+.boxcolor4{
+	background-color: #0290bf;
+	cursor: pointer;
+}
+.boxcolor5{
+	background-color: #05ad9f;
+	cursor: pointer;
+}
+/***************************** Popup Section ******************************/
+
+.popupSection{
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 100vh;
+}
+.popupCard{
+	width: 50%;
+	height: 80vh;
+	background-color: white;
+	border-radius: 25px;
+	margin: 5% auto;
+	position: relative;
+	text-align: center;
+	padding-top: 10px;
+	display: grid;
+	grid-template-areas: 'a2' 'a1';
+	box-sizing: border-box;
+	animation: zoom 1s ease-in-out alternate;
+}
+.popupCard .closebtn{
+	border: none;
+	background: none;
+	background-color: white;
+	color:black;
+	font-size: 20px;
+	border-radius:50% ;
+	padding: 3px;
+	width: 30px;
+	height: 30px;
+	font-weight: 600;
+	cursor: pointer;
+	position: absolute;
+	top: -20px;
+	right: -40px;
+}
+.popupcarddiv1{
+	grid-area: a1;
+	text-align: center;
+}
+.popupcarddiv2{
+	grid-area: a2;
+	text-align: center;
+	padding-top: 10px;
+}
+.popuptext{
+	display:block;
+	text-align: center;
+}
+#cardHeading{
+	color: #c70683;
+	font-size:25px;
+	font-weight: 600;
+}
+#cardspan1{
+	color: #05ad9f;
+	font-size:25px;
+	font-weight: 600;
+}
+ #cardspan2{
+	color: #0290bf;
+	font-size:35px;
+	top: 50px;
+	text-align: center;
+	left: 60px;
+	padding-top: 5px;
+}
+.popupcarddiv2 img{
+	width:80%;
+	height: 90%;
+	border-radius: 20px;
+}
+/* .closebtn:active .popupCard{
+	animation: zoom 1s ease-in-out alternate-reverse;
+} */
+@keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+  }
+
+  @keyframes zoom2 {
+	from {transform:scale(1)}
+	to {transform:scale(0)}
+  }
+
+
+  @media only screen and (max-width:1200px){
+	
+	.flexsection{
+		width: 60%;
+		height: 90vh;
+	}
+  }
+  @media only screen and (max-width:915px){
+	.flexsection{
+		width: 80%;
+	}
+	
+  }
+  @media only screen and (max-width:800px){
+	.popupCard{
+		width: 60%;
+	}
+  }
+  @media only screen and (max-width:700px){
+	.flexsection{
+		width: 80%;
+		padding: 20px 50px;
+	}
+	
+  }
+  @media only screen and (max-width:570px){
+	.flexsection{
+		width: 90%;
+		padding: 20px 50px;
+	}
+	.popupCard{
+		width: 75%;
+	}
+	
+  }
+
+ 
+  @media only screen and (max-width:500px){
+	.flexsection{
+		width: 95%;
+		padding: 20px 10px;
+	}
+	.popupCard{
+		width: 75%;
+		height: 60vh;
+	}
+	
+  }
+  @media only screen and (max-width:390px){
+	.flexsection{
+		width: 95%;
+		height: 95vh;
+		margin: 2% auto;
+		padding: 5px 10px;
+	}
+	.popupCard{
+		width: 95%;
+		margin: 30% auto;
+	}
+	.firstflex .flexbox{
+		height: 85px;
+	}
+	.popupCard .closebtn{
+		top: -40px;
+		right: 10px;
+	}
+
+  }
